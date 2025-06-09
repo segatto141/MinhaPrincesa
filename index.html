@@ -43,6 +43,18 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
 
+             <div class="col-md-4 mb-4">
+                <div class="card background-card text-light">
+                    <img src="https://i.pinimg.com/236x/a9/e0/82/a9e08287fe05549f56d5e55fd41af6d7.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ticket #1</h5>
+                        <p class="card-text">Vale ligação</p>
+                        <button class="btn btn-danger" id="resgate1">Resgatar</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-4 mb-4">
                 <div class="card background-card text-light">
                     <img src="https://i.pinimg.com/236x/a9/e0/82/a9e08287fe05549f56d5e55fd41af6d7.jpg"
@@ -132,6 +144,7 @@
     <script>
         var alerta = window.alert("TE ADORO DEMAIS MINHA GATINHAAA !")
 
+        const resgate1 = document.getElementById("resgate1")
         const resgate2 = document.getElementById("resgate2")
         const resgate3 = document.getElementById("resgate3")
         const resgate4 = document.getElementById("resgate4")
@@ -139,6 +152,14 @@
         const resgate6 = document.getElementById("resgate6")
         const resgate7 = document.getElementById("resgate7")
         const resgate8 = document.getElementById("resgate8")
+
+         resgate1.addEventListener("click", function () {
+            var numeroTelefone = "+5511973061169";
+            var mensagem = encodeURIComponent("Quero resgatar o ticket 1 meu amor ");
+
+            var url = "https://wa.me/" + numeroTelefone + "?text=" + mensagem;
+            window.open(url, "_blank");
+        })
 
         resgate2.addEventListener("click", function () {
             var numeroTelefone = "+5511973061169";
